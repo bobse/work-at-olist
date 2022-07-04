@@ -20,7 +20,6 @@ class BookSerializer(serializers.ModelSerializer):
 		authors_pk = self.initial_data.get('authors')
 		for author in Author.objects.filter(pk__in = authors_pk):
 			parent.authors.add(author)
-		parent.save()
 		return parent
 
 	def update(self, instance, validated_data):
@@ -29,5 +28,4 @@ class BookSerializer(serializers.ModelSerializer):
 		parent.authors.clear()
 		for author in Author.objects.filter(pk__in=authors_pk):
 			parent.authors.add(author)
-		parent.save()
 		return parent
