@@ -12,5 +12,5 @@ router.register(r'authors', AuthorView, basename="authors")
 
 urlpatterns = [
     # path('authors/', AuthorView.as_view(), name='authors'),
-	path('', include(router.urls))
+	path('library/', include(router.urls))
 ]
