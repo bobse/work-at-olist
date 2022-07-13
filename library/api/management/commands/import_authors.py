@@ -17,7 +17,9 @@ class Command(BaseCommand):
                 # skipping header in csv file
                 next(csv_reader)
                 authors = [Author(name=author[0]) for author in csv_reader]
+                print(f"Inserting {len(authors)} authors into the database.")
                 Author.objects.bulk_create(authors)
-                print(f"Total of {len(authors)} authors imported into the database.")
-        except Exception:
+                print(f"Total of {Author.objects.all().count()} authors imported into the database.")
+        except Exception as e:
+            print(e)
             raise CommandError(f"There was an error while importing {file}")
