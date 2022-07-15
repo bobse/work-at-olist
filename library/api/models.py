@@ -1,4 +1,6 @@
-from django.db import models
+from django.db import models, migrations
+from django.db.models.functions import Upper
+from django.contrib.postgres.indexes import GinIndex, OpClass
 
 
 class Author(models.Model):
@@ -9,6 +11,13 @@ class Author(models.Model):
 
 	class Meta:
 		ordering = ['name']
+		# don't forget to add django.contrib.postgres to INSTALLED_APPS
+		indexes = [
+				GinIndex(
+						OpClass(Upper('name'), name = 'gin_trgm_ops'),
+						name = 'author_up_gin_idx',
+				)
+		]
 
 
 class Book(models.Model):

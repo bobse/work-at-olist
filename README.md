@@ -36,7 +36,12 @@ This project was made following the instructions from the work at olist challeng
 ```
     $ python manage.py runserver --settings=library.settings.development
 ```
-
+## POSTGRES SETUP (No longer necessary. Done in Django):
+Since we have more than a million records for authors for faster search I created a trigram index for authors.
+- Trigram Gin Index for Author name Search:
+```
+CREATE EXTENSION pg_trgm;
+```
 ## Tests:
 ```
     $ python manage.py test --settings=library.settings.development
