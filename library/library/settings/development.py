@@ -11,12 +11,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 INTERNAL_IPS = [
     '127.0.0.1'
@@ -24,3 +18,5 @@ INTERNAL_IPS = [
 # django toolbar
 MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
 INSTALLED_APPS.append('debug_toolbar')
+
+DATABASES = {'default': dj_database_url.config(default=os.environ['DATABASE_URL'], conn_max_age=600, ssl_require=False)}

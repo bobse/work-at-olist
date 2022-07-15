@@ -1,5 +1,7 @@
-Django==4.0.5
-flake8==4.0.1
-djangorestframework==3.13.1
+Django˜=4.0.5
+flake8˜=4.0.1
 python-dotenv~=0.20.0
 django-filter~=22.1
+Django~=4.0.5
+djangorestframework~=3.13.1
+dj_database_url˜=0.5.0
