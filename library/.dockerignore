@@ -1,0 +1,4 @@
+./library/settings/.env
+*.env
+authors.csv
+*/venv
