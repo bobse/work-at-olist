@@ -52,7 +52,4 @@ CREATE EXTENSION pg_trgm;
 - /library/books/
 - /library/docs/
 
-## Deployed version:
-
-## Documentation:
 
