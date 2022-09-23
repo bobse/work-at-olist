@@ -22,6 +22,7 @@ This project was made following the instructions from the work at olist challeng
 - Create .env file inside settings folder with secret key:
 ```
     SECRET_KEY="xxxxxx"
+    DATABASE_URL="postgres://postgres:test@localhost:5432/postgres"
 ```
 - Migrate database
 ```
