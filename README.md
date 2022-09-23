@@ -2,7 +2,7 @@
 ## Project Description:
 This project is built on Python and Django Rest Framework, it provides a REST API for a library to store book and authors data.
 
-It uses a PostgreSQL Database instead of Sqlite3 because it has a some features which can make the project better with him. For performance reason, while testing, the project uses a Sqlite3 DB.
+It uses a PostgreSQL Database instead of Sqlite3 because it has a some features which can make the project better with him. 
 
 This project was made following the instructions from the work at olist challenge: https://github.com/olist/work-at-olist
 
